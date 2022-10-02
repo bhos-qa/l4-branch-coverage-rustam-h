@@ -1,5 +1,8 @@
 package org.example;
 
+import java.io.File;
+import java.io.IOException;
+
 enum Color{
     BLACK,
     BLUE,
@@ -72,5 +75,12 @@ public class Vehicle {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    public void vulnerableCode() throws IOException {
+        File tempDir;
+        tempDir = File.createTempFile("", ".");
+        tempDir.delete();
+        tempDir.mkdir();
     }
 }
